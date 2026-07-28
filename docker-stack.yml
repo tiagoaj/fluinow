@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  site:
+    image: ${FLUINOW_IMAGE:-ghcr.io/tiagoaj/fluinow:latest}
+    networks:
+      - traefik-public
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 1
+        order: start-first
+        delay: 10s
+        failure_action: rollback
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=${TRAEFIK_NETWORK:-traefik-public}
+        - traefik.http.routers.fluinow-http.rule=Host(`fluinow.com.br`) || Host(`www.fluinow.com.br`)
+        - traefik.http.routers.fluinow-http.entrypoints=web
+        - traefik.http.routers.fluinow-http.middlewares=fluinow-https
+        - traefik.http.middlewares.fluinow-https.redirectscheme.scheme=https
+        - traefik.http.middlewares.fluinow-https.redirectscheme.permanent=true
+        - traefik.http.routers.fluinow.rule=Host(`fluinow.com.br`) || Host(`www.fluinow.com.br`)
+        - traefik.http.routers.fluinow.entrypoints=websecure
+        - traefik.http.routers.fluinow.tls=true
+        - traefik.http.routers.fluinow.tls.certresolver=${TRAEFIK_CERTRESOLVER:-letsencrypt}
+        - traefik.http.services.fluinow.loadbalancer.server.port=3000
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+networks:
+  traefik-public:
+    external: true
+    name: ${TRAEFIK_NETWORK:-traefik-public}

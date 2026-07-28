@@ -1,0 +1,10 @@
+.git
+.next
+.open-next
+.openai
+node_modules
+npm-debug.log*
+fluinow-sites.tar.gz
+Dockerfile*
+docker-stack*.yml
+DEPLOY-PORTAINER.md

@@ -57,14 +57,14 @@ export default function Home() {
     <main>
       <nav className="nav shell">
         <a className="brand" href="#top" aria-label="Fluinow — início">
-          <span className="brand-mark"><i /><i /><i /></span>
-          <span>fluinow</span>
+          <img src="/logo-fluinow.png" alt="Fluinow" />
         </a>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menu">
           <span /><span />
         </button>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <a href="#servicos" onClick={() => setMenuOpen(false)}>Soluções</a>
+          <a href="#saas" onClick={() => setMenuOpen(false)}>SaaS próprios</a>
           <a href="#metodo" onClick={() => setMenuOpen(false)}>Como fazemos</a>
           <a href="#sobre" onClick={() => setMenuOpen(false)}>Por que a Fluinow</a>
         </div>
@@ -137,6 +137,94 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="agents-section section" id="agentes">
+        <div className="shell">
+          <div className="agents-layout">
+            <div className="agents-copy reveal">
+              <span className="kicker light">/ Agentes de IA personalizados</span>
+              <h2>Um agente que entende<br />seu negócio e <em>faz acontecer.</em></h2>
+              <p>Criamos agentes de IA sob medida, treinados com o contexto da sua empresa e conectados às ferramentas que sua operação já usa. Eles conversam, decidem e executam — com a linguagem e as regras do seu negócio.</p>
+              <div className="agent-types">
+                {["Atendimento", "Agendamento", "SDR", "BDR", "Vendas", "Suporte"].map((type, i) => (
+                  <span key={type}><b>0{i + 1}</b>{type}</span>
+                ))}
+              </div>
+              <a className="button agents-button" href="https://wa.me/5549920019125?text=Olá%2C%20quero%20criar%20um%20agente%20de%20IA%20personalizado" target="_blank" rel="noreferrer">Criar meu agente de IA <Arrow /></a>
+            </div>
+
+            <div className="agent-ecosystem reveal">
+              <img className="robot-visual" src="/ai-agent-robot.png" alt="Agente robô da Fluinow conversando e integrado a diferentes plataformas" />
+              <div className="ecosystem-center"><img src="/logo-fluinow.png" alt="Fluinow" /><span>AGENTE CENTRAL</span></div>
+              <div className="integration-node node-tiny"><b>tiny</b><small>ERP</small></div>
+              <div className="integration-node node-bling"><b>bling!</b></div>
+              <div className="integration-node node-kommo"><b>K</b><small>kommo</small></div>
+              <div className="integration-node node-facebook"><img src="/brands/facebook.svg" alt="Facebook" /></div>
+              <div className="integration-node node-instagram"><img src="/brands/instagram.svg" alt="Instagram" /></div>
+              <div className="integration-node node-chatwoot"><img src="/brands/chatwoot.png" alt="Chatwoot" /></div>
+              <div className="integration-node node-calcom"><img src="/brands/calcom.svg" alt="Cal.com" /></div>
+              <div className="integration-node node-calendar"><img src="/brands/googlecalendar.svg" alt="Google Agenda" /></div>
+              <div className="integration-node node-webhook"><b>⌁</b><small>webhooks</small></div>
+              <span className="connector c1" /><span className="connector c2" /><span className="connector c3" /><span className="connector c4" />
+            </div>
+          </div>
+          <div className="agents-proof reveal">
+            <span>PERSONALIZADO PARA SUA OPERAÇÃO</span>
+            <span>INTEGRADO AO SEU ECOSSISTEMA</span>
+            <span>EVOLUÇÃO E MONITORAMENTO CONTÍNUOS</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="saas-section section" id="saas">
+        <div className="shell">
+          <div className="section-heading reveal">
+            <div><span className="kicker">/ SaaS próprios</span><h2>Tecnologia que nasce<br />de um <em>problema real.</em></h2></div>
+            <p>Além de construir para nossos clientes, criamos produtos próprios para tornar operações de IA mais confiáveis, previsíveis e fáceis de escalar.</p>
+          </div>
+
+          <article className="snw-card reveal">
+            <div className="snw-copy">
+              <div className="product-label"><span>PRODUTO FLUINOW</span><i>MONITORAMENTO 24/7</i></div>
+              <div className="snw-title"><span className="snw-mark">S</span><div><strong>SNW</strong><small>Sistema de Notificação WhatsApp</small></div></div>
+              <h3>Saiba que a conexão caiu<br /><em>antes do seu cliente.</em></h3>
+              <p>Monitoramento em tempo real para agências de IA e empresas que operam WhatsApp. Quando uma conexão cai, o SNW avisa automaticamente o cliente e o time técnico — e confirma quando tudo está online novamente.</p>
+              <div className="integration-caption">INTEGRAÇÃO NATIVA COM</div>
+              <div className="integration-list">
+                <span><img src="/brands/uazapi.png" alt="" /><strong>UAZAPI</strong></span>
+                <span><img src="/brands/evolution.png" alt="" /><strong>EVOLUTION</strong></span>
+                <span><img src="/brands/waha.png" alt="" /><strong>WAHA</strong></span>
+              </div>
+              <a className="button snw-button" href="https://snw.fluinow.com.br" target="_blank" rel="noreferrer">Quero conhecer o SNW <Arrow /></a>
+            </div>
+
+            <div className="snw-dashboard">
+              <div className="dashboard-head"><span>SNW / MONITOR AO VIVO</span><b><i /> 12 CONEXÕES ONLINE</b></div>
+              <div className="connection-card offline">
+                <div className="connection-icon">!</div>
+                <div><small>CONEXÃO DO CLIENTE</small><strong>WhatsApp desconectado</strong><span>Detectado agora</span></div>
+                <b>OFFLINE</b>
+              </div>
+              <div className="notification-flow">
+                <div className="flow-step"><span>01</span><i>⚡</i><div><strong>Detecção imediata</strong><small>Monitoramento em tempo real</small></div></div>
+                <div className="flow-step"><span>02</span><i>↗</i><div><strong>Alertas automáticos</strong><small>Cliente + time técnico</small></div></div>
+                <div className="flow-step active"><span>03</span><i>✓</i><div><strong>Reconexão confirmada</strong><small>Time técnico notificado</small></div></div>
+              </div>
+              <div className="reconnect-box">
+                <small>OPÇÕES DE RECONEXÃO</small>
+                <div><span><i>▦</i> QR Code</span><span><i>#</i> Código de pareamento</span></div>
+              </div>
+              <div className="dashboard-footer"><span><i /> SISTEMA OPERACIONAL</span><small>Última verificação: agora</small></div>
+            </div>
+          </article>
+
+          <div className="snw-benefits reveal">
+            <div><span>01</span><strong>Reduza o tempo offline</strong><p>Seu time descobre a queda no momento em que ela acontece.</p></div>
+            <div><span>02</span><strong>Comunique sem esforço</strong><p>Cliente e suporte recebem as informações certas automaticamente.</p></div>
+            <div><span>03</span><strong>Feche o ciclo</strong><p>A reconexão também pode ser notificada para confirmar a normalização.</p></div>
+          </div>
+        </div>
+      </section>
+
       <section className="method section" id="metodo">
         <div className="shell">
           <div className="method-intro reveal">
@@ -181,6 +269,10 @@ export default function Home() {
       <section className="cta-section shell" id="contato">
         <div className="cta-card reveal">
           <div className="cta-orb" />
+          <div className="cta-robot-wrap">
+            <div className="robot-speech">E aí, bora conversar?</div>
+            <img src="/cta-robot-headset.png" alt="Robô feliz da Fluinow usando headset" />
+          </div>
           <span className="kicker light">/ Vamos conversar</span>
           <h2>Seu próximo salto<br />começa com uma<br /><em>boa conversa.</em></h2>
           <p>Em 30 minutos, mapeamos uma oportunidade real de IA dentro da sua operação.</p>
@@ -189,10 +281,21 @@ export default function Home() {
         </div>
       </section>
 
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/5549920019125?text=Olá%2C%20vim%20pelo%20site%20da%20Fluinow%20e%20quero%20entender%20como%20a%20IA%20pode%20ajudar%20meu%20negócio."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Falar com a Fluinow pelo WhatsApp"
+      >
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3a12.5 12.5 0 0 0-10.7 18.96L3.5 28.7l6.9-1.8A12.5 12.5 0 1 0 16.04 3Zm0 22.7c-1.94 0-3.83-.55-5.46-1.58l-.39-.23-4.1 1.07 1.1-3.98-.25-.41a10.22 10.22 0 1 1 9.1 5.13Zm5.6-7.65c-.31-.16-1.82-.9-2.1-1-.29-.1-.5-.16-.71.16-.2.3-.8 1-.98 1.2-.18.2-.36.23-.67.08-1.8-.9-2.98-1.6-4.18-3.65-.32-.55.32-.51.9-1.7.1-.2.05-.38-.03-.54-.07-.15-.7-1.69-.97-2.31-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.39-.29.3-1.1 1.07-1.1 2.62 0 1.54 1.13 3.03 1.28 3.24.16.2 2.22 3.39 5.38 4.76 2 .86 2.78.93 3.78.78 1.21-.18 1.82-.74 2.08-1.46.25-.72.25-1.33.18-1.46-.08-.13-.29-.2-.6-.37Z"/></svg>
+        <span>Fale com a gente</span>
+      </a>
+
       <footer className="footer shell">
-        <div className="brand footer-brand"><span className="brand-mark"><i /><i /><i /></span><span>fluinow</span></div>
+        <div className="brand footer-brand"><img src="/logo-fluinow.png" alt="Fluinow" /></div>
         <p>IA que trabalha pelo seu negócio.</p>
-        <div><a href="#servicos">Soluções</a><a href="#metodo">Processo</a><a href="mailto:agfluinow@gmail.com">Contato</a></div>
+        <div><a href="#servicos">Soluções</a><a href="#saas">SNW</a><a href="#metodo">Processo</a><a href="mailto:agfluinow@gmail.com">Contato</a></div>
         <span>© 2026 FLUINOW</span>
       </footer>
     </main>
