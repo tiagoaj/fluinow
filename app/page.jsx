@@ -64,6 +64,7 @@ export default function Home() {
         </button>
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <a href="#servicos" onClick={() => setMenuOpen(false)}>Soluções</a>
+          <a href="#marketing" onClick={() => setMenuOpen(false)}>Marketing</a>
           <a href="#saas" onClick={() => setMenuOpen(false)}>SaaS próprios</a>
           <a href="#metodo" onClick={() => setMenuOpen(false)}>Como fazemos</a>
           <a href="#sobre" onClick={() => setMenuOpen(false)}>Por que a Fluinow</a>
@@ -73,16 +74,16 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-copy reveal">
-          <div className="eyebrow"><span className="status-dot" /> Sua operação, em modo inteligente</div>
-          <h1>IA que<br /><em>trabalha</em> pelo<br />seu negócio.</h1>
-          <p>Transformamos processos lentos em sistemas inteligentes — com agentes, automações e produtos digitais que geram resultado de verdade.</p>
+          <div className="eyebrow"><span className="status-dot" /> Tudo que sua empresa precisa para crescer</div>
+          <h1>Marketing que atrai.<br /><em>IA que atende.</em><br />Tecnologia que escala.</h1>
+          <p>Cuidamos das suas redes sociais e anúncios, atendemos seus leads com agentes de IA e conectamos toda a operação com automações, sistemas e relatórios.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#contato">Quero transformar minha operação <Arrow /></a>
-            <a className="text-link" href="#servicos">Conhecer soluções <span>↓</span></a>
+            <a className="button button-primary" href="#contato">Quero crescer com a Fluinow <Arrow /></a>
+            <a className="text-link" href="#marketing">Ver como funciona <span>↓</span></a>
           </div>
           <div className="trust-row">
             <div className="avatars"><span>AI</span><span>01</span><span>24h</span></div>
-            <p><strong>Estratégia + execução</strong><br />Do primeiro diagnóstico à escala.</p>
+            <p><strong>Uma empresa. Toda a jornada.</strong><br />Aquisição, atendimento, dados e tecnologia.</p>
           </div>
         </div>
 
@@ -95,41 +96,87 @@ export default function Home() {
             <div className="flow-line line-one" />
             <div className="flow-line line-two" />
             <div className="flow-line line-three" />
-            <div className="node node-main"><span className="node-icon">✦</span><strong>Agente central</strong><small>Orquestrando operação</small><b>PROCESSANDO</b></div>
-            <div className="node node-a"><span className="mini-icon blue">↗</span><div><strong>Leads</strong><small>+47 hoje</small></div></div>
-            <div className="node node-b"><span className="mini-icon lime">✓</span><div><strong>Processos</strong><small>98% automático</small></div></div>
-            <div className="node node-c"><span className="mini-icon orange">◎</span><div><strong>Clientes</strong><small>12 atendidos agora</small></div></div>
+            <div className="node node-main"><span className="node-icon">✦</span><strong>Operação integrada</strong><small>Marketing + IA + Dados</small><b>EM MOVIMENTO</b></div>
+            <div className="node node-a"><span className="mini-icon blue">↗</span><div><strong>Tráfego pago</strong><small>Leads em escala</small></div></div>
+            <div className="node node-b"><span className="mini-icon lime">✓</span><div><strong>Agente de IA</strong><small>Atendimento 24/7</small></div></div>
+            <div className="node node-c"><span className="mini-icon orange">◎</span><div><strong>Social Media</strong><small>Marca presente</small></div></div>
           </div>
           <div className="system-bottom">
-            <div><span>TEMPO ECONOMIZADO</span><strong>+128h</strong><small>/ mês</small></div>
+            <div><span>JORNADA CONECTADA</span><strong>360°</strong><small>ponta a ponta</small></div>
             <div className="mini-chart"><i /><i /><i /><i /><i /><i /><i /></div>
           </div>
-          <div className="floating-note"><span>↗</span><div><strong>+32%</strong><small>Eficiência operacional</small></div></div>
+          <div className="floating-note"><span>✓</span><div><strong>Tudo conectado</strong><small>Uma única parceira</small></div></div>
         </div>
       </section>
 
       <section className="manifest">
         <div className="marquee">
-          <span>AGENTES QUE PENSAM</span><b>✦</b><span>AUTOMAÇÕES QUE FLUEM</span><b>✦</b><span>PRODUTOS QUE ESCALAM</span><b>✦</b>
-          <span>AGENTES QUE PENSAM</span><b>✦</b><span>AUTOMAÇÕES QUE FLUEM</span><b>✦</b>
+          <span>MARKETING QUE ATRAI</span><b>✦</b><span>AGENTES QUE CONVERTEM</span><b>✦</b><span>AUTOMAÇÕES QUE ESCALAM</span><b>✦</b>
+          <span>DADOS QUE ORIENTAM</span><b>✦</b><span>SOLUÇÕES SOB MEDIDA</span><b>✦</b>
+        </div>
+      </section>
+
+      <section className="marketing-section section" id="marketing">
+        <div className="shell">
+          <div className="marketing-heading reveal">
+            <div><span className="kicker">/ Marketing Digital</span><h2>Presença que atrai.<br /><em>Mídia que converte.</em></h2></div>
+            <p>Nós planejamos o conteúdo, cuidamos das redes sociais, gerenciamos os anúncios e mostramos com clareza o que está trazendo resultado.</p>
+          </div>
+          <div className="marketing-visual reveal">
+            <img src="/marketing-digital-v2.png" alt="Profissional gerenciando conteúdo para redes sociais, campanhas de tráfego pago e relatórios de leads" />
+            <div className="marketing-visual-labels">
+              <span><b>01</b> Conteúdo e redes sociais</span>
+              <span><b>02</b> Campanhas de tráfego pago</span>
+              <span><b>03</b> Leads e relatórios</span>
+            </div>
+          </div>
+          <div className="marketing-grid">
+            <article className="marketing-feature reveal">
+              <div className="marketing-card-head"><span>01</span><b>SOCIAL MEDIA</b></div>
+              <div className="social-preview">
+                <div className="social-brand"><img src="/logo-fluinow.png" alt="" /></div>
+                <div className="social-post p1"><span>CONTEÚDO</span><strong>Marca presente.<br />Mensagem clara.</strong></div>
+                <div className="social-post p2"><span>PLANEJAMENTO</span><strong>Calendário que<br />faz sentido.</strong></div>
+                <img className="social-logo instagram" src="/brands/instagram.svg" alt="Instagram" />
+                <img className="social-logo facebook" src="/brands/facebook.svg" alt="Facebook" />
+              </div>
+              <h3>Gestão completa das suas mídias sociais.</h3>
+              <p>Estratégia editorial, planejamento, criação de conteúdo, design, copy, publicação e acompanhamento para construir autoridade e relacionamento.</p>
+              <ul><li>Planejamento e calendário editorial</li><li>Conteúdo, copy e direção criativa</li><li>Gestão de Instagram e Facebook</li></ul>
+            </article>
+            <article className="marketing-feature reveal">
+              <div className="marketing-card-head"><span>02</span><b>TRÁFEGO PAGO</b></div>
+              <div className="traffic-dashboard">
+                <div className="traffic-top"><span>CAMPANHAS / AO VIVO</span><b><i /> OTIMIZANDO</b></div>
+                <div className="traffic-metric"><small>PERFORMANCE</small><strong>+ oportunidades</strong><span>com decisões guiadas por dados</span></div>
+                <div className="traffic-chart"><i /><i /><i /><i /><i /><i /><i /><i /></div>
+                <div className="traffic-channels"><span><img src="/brands/facebook.svg" alt="" /> Meta Ads</span><span><b>G</b> Google Ads</span></div>
+              </div>
+              <h3>Investimento orientado a resultado.</h3>
+              <p>Criamos, gerenciamos e otimizamos campanhas para gerar alcance, oportunidades e vendas com transparência e visão de negócio.</p>
+              <ul><li>Estratégia e estrutura de campanhas</li><li>Gestão de Meta Ads e Google Ads</li><li>Otimização contínua e relatórios</li></ul>
+            </article>
+          </div>
+          <div className="marketing-bridge reveal">
+            <div><span>01</span><strong>Atraímos</strong><small>Conteúdo + mídia paga</small></div><i>→</i>
+            <div><span>02</span><strong>Atendemos</strong><small>Agentes de IA 24/7</small></div><i>→</i>
+            <div><span>03</span><strong>Integramos</strong><small>CRM + automações</small></div><i>→</i>
+            <div><span>04</span><strong>Medimos</strong><small>Relatórios inteligentes</small></div>
+          </div>
         </div>
       </section>
 
       <section className="services shell section" id="servicos">
         <div className="section-heading reveal">
-          <div><span className="kicker">/ O que fazemos</span><h2>Da complexidade<br />à <em>clareza.</em></h2></div>
-          <p>Não vendemos tecnologia por tecnologia. Criamos sistemas que resolvem problemas reais, liberam seu time e movem os indicadores certos.</p>
+          <div><span className="kicker">/ Tecnologia sob medida</span><h2>Quando o padrão não resolve,<br /><em>a gente constrói.</em></h2></div>
+          <p>Além do marketing, criamos a tecnologia que sua operação precisa: agentes de IA, automações, integrações e sistemas personalizados.</p>
         </div>
         <div className="service-grid">
           {services.map((service) => (
             <article className={`service-card reveal ${service.accent}`} key={service.number}>
               <div className="card-top"><span>{service.number}</span><b>{service.tag}</b></div>
-              <div className="service-visual">
-                <div className="orbit o1" /><div className="orbit o2" />
-                <span>{service.number === "01" ? "✦" : service.number === "02" ? "⌁" : "◫"}</span>
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
+              <div className="service-visual"><div className="orbit o1" /><div className="orbit o2" /><span>{service.number === "01" ? "✦" : service.number === "02" ? "⌁" : "◫"}</span></div>
+              <h3>{service.title}</h3><p>{service.text}</p>
               <ul>{service.bullets.map((b) => <li key={b}><i />{b}</li>)}</ul>
               <a href="#contato">Explorar solução <Arrow /></a>
             </article>
@@ -149,7 +196,7 @@ export default function Home() {
                   <span key={type}><b>0{i + 1}</b>{type}</span>
                 ))}
               </div>
-              <a className="button agents-button" href="https://wa.me/5549920019125?text=Olá%2C%20quero%20criar%20um%20agente%20de%20IA%20personalizado" target="_blank" rel="noreferrer">Criar meu agente de IA <Arrow /></a>
+              <a className="button agents-button" href="https://wa.me/5549988422630?text=Olá%2C%20quero%20criar%20um%20agente%20de%20IA%20personalizado" target="_blank" rel="noreferrer">Criar meu agente de IA <Arrow /></a>
             </div>
 
             <div className="agent-ecosystem reveal">
@@ -283,7 +330,7 @@ export default function Home() {
 
       <a
         className="whatsapp-float"
-        href="https://wa.me/5549920019125?text=Olá%2C%20vim%20pelo%20site%20da%20Fluinow%20e%20quero%20entender%20como%20a%20IA%20pode%20ajudar%20meu%20negócio."
+        href="https://wa.me/5549988422630?text=Olá%2C%20vim%20pelo%20site%20da%20Fluinow%20e%20quero%20entender%20como%20a%20IA%20pode%20ajudar%20meu%20negócio."
         target="_blank"
         rel="noreferrer"
         aria-label="Falar com a Fluinow pelo WhatsApp"

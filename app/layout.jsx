@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Fluinow | IA que trabalha pelo seu negócio",
+  title: "Fluinow | Marketing, IA e tecnologia de ponta a ponta",
   description:
-    "Agentes de IA, automações inteligentes e produtos SaaS feitos para transformar processos em crescimento.",
+    "Marketing digital, gestão de mídias sociais, tráfego pago, agentes de IA, automações, integrações e sistemas personalizados em uma única empresa.",
 };
 
 export default function RootLayout({ children }) {
