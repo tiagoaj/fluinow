@@ -1,4 +1,5 @@
 import "./globals.css";
+import ConsentManager from "../components/ConsentManager";
 
 export const metadata = {
   title: "Fluinow | Marketing, IA e tecnologia de ponta a ponta",
@@ -9,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>{children}<ConsentManager /></body>
     </html>
   );
 }

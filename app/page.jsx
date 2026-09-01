@@ -343,6 +343,7 @@ export default function Home() {
         <div className="brand footer-brand"><img src="/logo-fluinow.png" alt="Fluinow" /></div>
         <p>IA que trabalha pelo seu negócio.</p>
         <div><a href="#servicos">Soluções</a><a href="#saas">SNW</a><a href="#metodo">Processo</a><a href="mailto:agfluinow@gmail.com">Contato</a></div>
+        <div className="footer-legal"><a href="/privacidade">Privacidade</a><a href="/cookies">Cookies</a><a href="/termos">Termos</a><button type="button" onClick={() => window.dispatchEvent(new Event("fluinow:open-consent"))}>Gerenciar cookies</button></div>
         <span>© 2026 FLUINOW</span>
       </footer>
     </main>
